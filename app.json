@@ -46,7 +46,10 @@
         "@sentry/react-native",
         {
           "organization": "rijul-sarin",
-          "project": "habitlock-ai"
+          "project": "habitlock-ai",
+          "authToken": {
+            "secret": "SENTRY_AUTH_TOKEN"
+          }
         }
       ]
     ],
