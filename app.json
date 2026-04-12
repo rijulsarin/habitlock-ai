@@ -42,7 +42,12 @@
           "defaultChannel": "habits"
         }
       ],
-      "@sentry/react-native"
+      [
+        "@sentry/react-native",
+        {
+          "uploadSourceMaps": false
+        }
+      ]
     ],
     "extra": {
       "llmProxyUrl": "https://habitlock-ai.vercel.app/api/llm",
