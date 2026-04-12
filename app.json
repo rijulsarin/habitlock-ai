@@ -45,7 +45,8 @@
       [
         "@sentry/react-native",
         {
-          "uploadSourceMaps": false
+          "organization": "rijul-sarin",
+          "project": "habitlock-ai"
         }
       ]
     ],
