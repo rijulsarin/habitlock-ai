@@ -46,10 +46,7 @@
         "@sentry/react-native",
         {
           "organization": "rijul-sarin",
-          "project": "habitlock-ai",
-          "authToken": {
-            "secret": "SENTRY_AUTH_TOKEN"
-          }
+          "project": "habitlock-ai"
         }
       ]
     ],
@@ -67,6 +64,9 @@
       "policy": "appVersion"
     },
     "scheme": "habitlock",
-    "owner": "rijulsarin"
+    "owner": "rijulsarin",
+    "updates": {
+      "url": "https://u.expo.dev/e2928370-7fe8-43e7-a5ee-ebef6201c95e"
+    }
   }
 }
