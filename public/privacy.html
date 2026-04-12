@@ -5,48 +5,196 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — HabitLock AI</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 680px; margin: 40px auto; padding: 0 24px; color: #222; line-height: 1.7; }
-    h1 { font-size: 24px; margin-bottom: 4px; }
-    h2 { font-size: 16px; margin-top: 36px; }
-    p, li { font-size: 15px; color: #444; }
-    a { color: #4338ca; }
-    .updated { font-size: 13px; color: #888; margin-bottom: 32px; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f9f9fb;
+      color: #222;
+      line-height: 1.75;
+      padding: 40px 24px 80px;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid #e5e5ea;
+    }
+
+    .logo {
+      width: 42px;
+      height: 42px;
+      background: #4338ca;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .header-text h1 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.2px;
+    }
+
+    .header-text span {
+      font-size: 13px;
+      color: #888;
+    }
+
+    /* Page title */
+    .page-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .updated {
+      font-size: 13px;
+      color: #999;
+      margin-bottom: 24px;
+    }
+
+    .intro {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 40px;
+      padding: 16px 20px;
+      background: #eef2ff;
+      border-left: 3px solid #4338ca;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* Sections */
+    .section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+      border: 1px solid #e5e5ea;
+    }
+
+    h2 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #4338ca;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #444;
+    }
+
+    strong { color: #222; }
+
+    a { color: #4338ca; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Footer */
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 13px;
+      color: #bbb;
+    }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: April 2026</p>
+  <div class="container">
 
-  <p>HabitLock AI ("the app") is built on a simple principle: your behavioral data is yours. This policy explains exactly what we collect, what we don't, and why.</p>
+    <div class="header">
+      <div class="logo">
+        <!-- Checkmark icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+      </div>
+      <div class="header-text">
+        <h1>HabitLock AI</h1>
+        <span>Behavioral science, not streaks</span>
+      </div>
+    </div>
 
-  <h2>What data is stored — and where</h2>
-  <p>All data you create in the app — habits, check-ins, miss attributions, obstacle plans, and preferences — is stored <strong>exclusively on your device</strong> using local storage (SQLite). This data is never transmitted to our servers, never sold, and never shared with third parties.</p>
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="updated">Last updated: April 2026</p>
 
-  <h2>What leaves your device</h2>
-  <p>When you use an AI-powered feature (habit creation, miss attribution, obstacle planning, or the weekly summary), the relevant text from your conversation is sent to our secure server proxy, which forwards it to an AI language model to generate a response. This text is not stored by us after the response is returned. We do not log conversation content.</p>
+    <p class="intro">HabitLock AI is built on a simple principle: your behavioral data is yours. This policy explains exactly what we collect, what we don't, and why.</p>
 
-  <h2>Analytics</h2>
-  <p>We use PostHog to collect anonymous product analytics (e.g., "a habit was created", "the attribution screen was opened"). These events do not include any personally identifiable information, habit content, or behavioral data. They help us understand which features are working and improve the product.</p>
+    <div class="section">
+      <h2>What data is stored — and where</h2>
+      <p>All data you create in the app — habits, check-ins, miss attributions, obstacle plans, and preferences — is stored <strong>exclusively on your device</strong> using local storage (SQLite). This data is never transmitted to our servers, never sold, and never shared with third parties.</p>
+    </div>
 
-  <h2>Crash reporting</h2>
-  <p>We use Sentry to capture crash reports when the app encounters an unexpected error. Crash reports may include device type, OS version, and a stack trace. They do not include habit content or personal data.</p>
+    <div class="section">
+      <h2>What leaves your device</h2>
+      <p>When you use an AI-powered feature (habit creation, miss attribution, obstacle planning, or the weekly summary), the relevant text from your conversation is sent to our secure server proxy, which forwards it to an AI language model to generate a response. This text is not stored by us after the response is returned. We do not log conversation content.</p>
+    </div>
 
-  <h2>Notifications</h2>
-  <p>If you enable notifications, the app schedules reminders locally on your device using the OS notification system. No notification content is sent to our servers.</p>
+    <div class="section">
+      <h2>Analytics</h2>
+      <p>We use PostHog to collect anonymous product analytics (e.g., "a habit was created", "the attribution screen was opened"). These events do not include any personally identifiable information, habit content, or behavioral data. They help us understand which features are working and improve the product.</p>
+    </div>
 
-  <h2>No accounts, no registration</h2>
-  <p>The app does not require you to create an account. We do not collect your name, email address, or any other identifying information.</p>
+    <div class="section">
+      <h2>Crash reporting</h2>
+      <p>We use Sentry to capture crash reports when the app encounters an unexpected error. Crash reports may include device type, OS version, and a stack trace. They do not include habit content or personal data.</p>
+    </div>
 
-  <h2>Data deletion</h2>
-  <p>To delete all your data, uninstall the app. Because all data is stored locally on your device, uninstalling removes it completely.</p>
+    <div class="section">
+      <h2>Notifications</h2>
+      <p>If you enable notifications, the app schedules reminders locally on your device using the OS notification system. No notification content is sent to our servers.</p>
+    </div>
 
-  <h2>Children</h2>
-  <p>The app is not directed at children under 13. We do not knowingly collect data from children.</p>
+    <div class="section">
+      <h2>No accounts, no registration</h2>
+      <p>The app does not require you to create an account. We do not collect your name, email address, or any other identifying information.</p>
+    </div>
 
-  <h2>Changes to this policy</h2>
-  <p>If we make material changes to this policy, we will update the date above and note the change in the app's release notes.</p>
+    <div class="section">
+      <h2>Data deletion</h2>
+      <p>To delete all your data, uninstall the app. Because all data is stored locally on your device, uninstalling removes it completely.</p>
+    </div>
 
-  <h2>Contact</h2>
-  <p>Questions? Reach us at <a href="mailto:rijul.sarin@gmail.com">rijul.sarin@gmail.com</a>.</p>
+    <div class="section">
+      <h2>Children</h2>
+      <p>The app is not directed at children under 13. We do not knowingly collect data from children.</p>
+    </div>
+
+    <div class="section">
+      <h2>Changes to this policy</h2>
+      <p>If we make material changes to this policy, we will update the date above and note the change in the app's release notes.</p>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Questions? Reach us at <a href="mailto:rijul.sarin@gmail.com">rijul.sarin@gmail.com</a>.</p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 HabitLock AI &middot; <a href="mailto:rijul.sarin@gmail.com">rijul.sarin@gmail.com</a>
+    </div>
+
+  </div>
 </body>
 </html>
