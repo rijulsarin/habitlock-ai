@@ -9,6 +9,7 @@
  * - App version
  */
 import Constants from 'expo-constants';
+import * as Updates from 'expo-updates';
 import { router } from 'expo-router';
 import React, { useState } from 'react';
 import { Alert, Pressable, ScrollView, StyleSheet, Switch, Text, View } from 'react-native';
@@ -74,6 +75,7 @@ export default function SettingsScreen() {
   }
 
   const version = Constants.expoConfig?.version ?? '—';
+  const updateId = Updates.updateId ? Updates.updateId.slice(0, 8) : 'local build';
 
   return (
     <SafeAreaView style={[styles.safe, { backgroundColor: colors.background }]} edges={['bottom']}>
@@ -160,6 +162,10 @@ export default function SettingsScreen() {
             <View style={styles.optionRow}>
               <Text style={[styles.optionLabel, { color: colors.textPrimary }]}>Version</Text>
               <Text style={[styles.optionSub, { color: colors.textTertiary }]}>{version}</Text>
+            </View>
+            <View style={[styles.optionRow, { borderTopWidth: 1, borderTopColor: colors.border }]}>
+              <Text style={[styles.optionLabel, { color: colors.textPrimary }]}>Update</Text>
+              <Text style={[styles.optionSub, { color: colors.textTertiary }]}>{updateId}</Text>
             </View>
             <View style={[styles.optionRow, { borderTopWidth: 1, borderTopColor: colors.border }]}>
               <Text style={[styles.optionLabel, { color: colors.textPrimary }]}>Built on</Text>
