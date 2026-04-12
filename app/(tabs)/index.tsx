@@ -17,6 +17,7 @@ import { CheckIn, ConsistencyRate, ContextModel, Habit } from '../../src/types';
 import { randomUUID } from 'expo-crypto';
 import { getDailyQuote } from '../../src/constants/quotes';
 import { Analytics } from '../../src/lib/monitoring';
+import { cancelTodaysMissCheck } from '../../src/lib/notifications';
 
 interface HabitRow {
   habit: Habit;
@@ -71,6 +72,7 @@ export default function HomeScreen() {
       notes: minimum ? 'minimum_version: true' : undefined,
     };
     insertCheckIn(checkIn);
+    cancelTodaysMissCheck(habit).catch(() => {});
     const daysSinceCreation = Math.floor(
       (Date.now() - new Date(habit.created_at).getTime()) / 86400000
     );
@@ -89,6 +91,7 @@ export default function HomeScreen() {
 
   function handleMiss(habit: Habit) {
     Analytics.checkInMissed();
+    cancelTodaysMissCheck(habit).catch(() => {});
     router.push({ pathname: '/attribution/[id]', params: { id: habit.id } });
   }
 
