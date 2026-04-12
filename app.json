@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "habitlock-tmp",
-    "slug": "habitlock-tmp",
+    "name": "HabitLock AI",
+    "slug": "habitlock-ai",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
@@ -16,15 +16,45 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.rijulsarin.habitlockai",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#4338ca"
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-secure-store",
+      "@react-native-community/datetimepicker",
+      "expo-web-browser",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#4338ca",
+          "defaultChannel": "habits"
+        }
+      ],
+      "@sentry/react-native"
+    ],
+    "extra": {
+      "llmProxyUrl": "https://habitlock-ai.vercel.app/api/llm",
+      "llmSharedSecret": "681aa3463bf732ae51121502a95bcec94f060d004918d3cd5d4eb6288af28278",
+      "sentryDsn": "https://0fff322fa8e30affa7a655fe81183102@o4511208643756032.ingest.us.sentry.io/4511208645918720",
+      "posthogApiKey": "phc_qi2yZdDWk8fESnMCPSgXVLJqkNfiqArthf7tRJzSVWxh",
+      "router": {},
+      "eas": {
+        "projectId": "e2928370-7fe8-43e7-a5ee-ebef6201c95e"
+      }
+    },
+    "scheme": "habitlock",
+    "owner": "rijulsarin"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/llm.ts": {
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    { "src": "/privacy", "dest": "/api/privacy.html" }
+  ]
+}
