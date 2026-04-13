@@ -1,4 +1,4 @@
-# habitlock-ai
+# HabitLock AI
 
 > Habit failure is almost never a motivation problem. It's a feedback loop problem.
 
