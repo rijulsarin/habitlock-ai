@@ -58,7 +58,7 @@ module.exports = {
     extra: {
       llmProxyUrl: 'https://habitlock-ai.vercel.app/api/llm',
       // Read from env var — set via EAS secret or .env.local for local dev
-      llmSharedSecret: process.env.LLM_SHARED_SECRET ?? '',
+      llmSharedSecret: process.env.LLM_SHARED_SECRET ?? '', // set via EAS env var, never hardcoded
       sentryDsn: 'https://0fff322fa8e30affa7a655fe81183102@o4511208643756032.ingest.us.sentry.io/4511208645918720',
       posthogApiKey: 'phc_qi2yZdDWk8fESnMCPSgXVLJqkNfiqArthf7tRJzSVWxh',
       router: {},
